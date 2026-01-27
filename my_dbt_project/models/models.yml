@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: main
+    tables:
+      - name: raw_credit_data
+
+models:
+  - name: stg_applications
+    description: "Cleaned application data"
+    columns:
+      - name: Ind_id 
+        tests:
+          - unique
+          - not_null
+
+  - name: credit_risk
+    description: "Final model calculating risk scores"
+    columns:
+      - name: risk_score
+        tests:
+          - not_null
+      - name: client_id
+        tests:
+          - relationships:
+              to: ref('stg_applications')
+              field: Ind_id
+      - name: CHILDREN
+        test: 
+          - not_null

@@ -1,0 +1,1 @@
+{"metadata": {"dbt_schema_version": "https://schemas.getdbt.com/dbt/catalog/v1.json", "dbt_version": "1.11.2", "generated_at": "2026-01-26T04:40:58.287774Z", "invocation_id": "96969589-d7a4-4546-80cf-8ff6942b44f8", "invocation_started_at": "2026-01-26T04:40:57.453691Z", "env": {}}, "nodes": {}, "sources": {}, "errors": ["Database Error\n  no such table: main.raw_credit_data"]}

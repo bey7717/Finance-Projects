@@ -1,0 +1,16 @@
+
+    
+    create view main."stg_applications" as
+    
+
+SELECT
+    Ind_ID,
+    Car_Owner,
+    Propert_Owner,
+    CHILDREN,
+    EDUCATION,
+    Annual_income 
+    age,
+    ABS(DAYS_EMPLOYED) / 365.0 as Employed_years,
+    label as is_rejected
+FROM main."raw_credit_data";
