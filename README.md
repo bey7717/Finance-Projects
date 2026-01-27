@@ -37,7 +37,6 @@ pip install -r requirements.txt
 - **Algorithm**: Random Forest Classifier
 - **Features**: 7 input features (Car Owner, Property Owner, Children, Education, Annual Income, Age, Employment Years)
 - **Training Data**: Credit card application dataset
-- **Decision Threshold**: 0.20 risk probability
 
 ## License
 MIT
