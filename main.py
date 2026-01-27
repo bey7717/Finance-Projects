@@ -1,5 +1,8 @@
 import streamlit as st
 import requests
+import os
+
+backend = os.getenv("BACKEND_URL", "http://127.0.0.1:8000/predict")
 
 st.set_page_config(page_title="CreditMatch AI", page_icon="💳")
 
@@ -51,6 +54,7 @@ if st.button("Analyze My Eligibility", use_container_width=True):
         "age": int(age_input),
         "Employed_years": float(employed_years_input)
     }
+    response = requests.post(backend, json=payload)
     
 # features = ["Car_Owner", "Propert_Owner", "CHILDREN", "EDUCATION", "Annual_income", "age", "Employed_years"]
 
